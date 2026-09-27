@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libretto Canti - Cenacolo Maria Consolatrice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        p {
+            color: #555;
+            font-size: 1.1rem;
+        }
+        .container {
+            width: 100%;
+            max-width: 900px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .pdf-viewer {
+            width: 100%;
+            height: 700px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .fallback-link {
+            display: none;
+            margin-top: 15px;
+            text-align: center;
+        }
+        /* Mostra un link di download se il browser mobile o datato non supporta il visualizzatore */
+        @supports not (selector(:fullscreen)) {
+            .fallback-link {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Cenacolo Maria Consolatrice</h1>
+        <p>Libretto Canti - Novembre 2025</p>
+    </header>
+
+    <div class="container">
+        <!-- Integrazione del file PDF -->
+        <embed src="libretto canti Novembre2025.pdf" type="application/pdf" class="pdf-viewer" />
+        
+        <!-- Messaggio alternativo/Link di download nel caso il browser non carichi l'anteprima -->
+        <div class="fallback-link">
+            <p>Il tuo browser non supporta la visualizzazione diretta del documento.</p>
+            <a href="libretto-canti.pdf" target="_blank">Clicca qui per scaricare o aprire il file PDF</a>
+        </div>
+    </div>
+
+</body>
+</html>
